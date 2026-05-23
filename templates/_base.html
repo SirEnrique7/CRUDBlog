@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <header>Bienvenido a mi Blog</header>
+    <header>
+        <a href="{% url 'post_list' %}">Mi Blog</a>
+    </header>
     {% block content %}
         
     {% endblock content %}
