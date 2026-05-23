@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- recorrer la list -->
+    <h1>lista de publicaciones</h1>
+    <ul>
+        {% for post in blog_list %}
+            <li>
+                <h2>{{ post.title }}</h2>
+                <p><strong>Autor:</strong> {{ post.author }}</p>
+                <p><strong>Fecha de creación:</strong> {{ post.created_at }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
