@@ -1,15 +1,14 @@
-{% extends '_base.html' %}  
+{% extends '_base.html' %}
 
 {% block content %}
     {% for post in blog_list %}
-            <ul>
-                <li>
-                    <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
-                    <p><strong>Autor:</strong> {{ post.author }}</p>
-                    <p><strong>Fecha de creación:</strong> {{ post.created_at }}</p>
-                    
-                </li>
-            </ul>
+        <ul>
+            <li>
+                <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+                <p><strong>autor:</strong> {{ post.author.username }}</p>
+                <p><strong>created at:</strong> {{ post.created_at }}</p>
+            </li>
+        </ul>
+
     {% endfor %}
 {% endblock content %}
-
